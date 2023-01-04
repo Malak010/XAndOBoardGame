@@ -7,6 +7,8 @@ public class XAndO {
 		//// initialize array with its element .. char [][] gBoard = new char[][]; or
 		char[][] gBoard = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 
+		System.out.println("Welcome to Tic Tac Toe Game..");
+
 		Scanner sc = new Scanner(System.in);
 
 		boolean togglePlayer = true;
@@ -25,7 +27,7 @@ public class XAndO {
 			}
 		}
 
-	}// End of Main Method
+	}// End of Main
 
 	/*
 	 * player 1 Turn -accept input from user and save it in userInput -Doing Check
@@ -69,23 +71,25 @@ public class XAndO {
 		move(gBoard, userInput2, 'O');// Any number 0-8 which selected by player1 will placed as X
 	}// End of playerTurn2 Method
 
-	/*
-	 * H-check"Row1" {{ 'X', 'X', 'X' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' }};
-	 * 
-	 * H-check"Row2" {{ ' ', ' ', ' ' }, { 'X', 'X', 'X' }, { ' ', ' ', ' ' }};
-	 * 
-	 * H-check"Row3" {{ ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { 'X', 'X', 'X' }};
-	 * 
-	 * V-check"Column1" {{ 'X', ' ', ' ' }, { 'X', ' ', ' ' }, { 'X', ' ', ' ' }};
-	 * 
-	 * V-check"Column2" {{ ' ', 'X', ' ' }, { ' ', 'X', ' ' }, { ' ', 'X', ' ' }};
-	 * 
-	 * V-check"Column3" {{ ' ', ' ', 'X' }, { ' ', ' ', 'X' }, { ' ', ' ', 'X' }};
-	 * 
-	 * Diagonal-Check {{ 'X', ' ', ' ' }, { ' ', 'X', ' ' }, { ' ', ' ', 'X' }};
-	 * 
-	 * Diagonal-Check {{ ' ', ' ', 'X' }, { ' ', 'X', ' ' }, { 'X', ' ', ' ' }};
-	 */
+/*
+		 * H-check"Row1" {{ 'X', 'X', 'X' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' }};
+		 * 
+		 * H-check"Row2" {{ ' ', ' ', ' ' }, { 'X', 'X', 'X' }, { ' ', ' ', ' ' }};
+		 * 
+		 * H-check"Row3" {{ ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { 'X', 'X', 'X' }};
+		 * 
+		 * V-check"Column1" {{ 'X', ' ', ' ' }, { 'X', ' ', ' ' }, { 'X', ' ', ' ' }};
+		 * 
+		 * V-check"Column2" {{ ' ', 'X', ' ' }, { ' ', 'X', ' ' }, { ' ', 'X', ' ' }};
+		 * 
+		 * V-check"Column3" {{ ' ', ' ', 'X' }, { ' ', ' ', 'X' }, { ' ', ' ', 'X' }};
+		 * 
+		 * Diagonal-Check {{ 'X', ' ', ' ' }, { ' ', 'X', ' ' }, { ' ', ' ', 'X' }};
+		 * 
+		 * Diagonal-Check {{ ' ', ' ', 'X' }, { ' ', 'X', ' ' }, { 'X', ' ', ' ' }};
+		 * 
+		 * 
+		 */
 	static boolean checkWinner(char[][] gBoard, char symbol) {
 		if (gBoard[0][0] == symbol && gBoard[0][1] == symbol && gBoard[0][2] == symbol) {
 			return true;
@@ -193,11 +197,12 @@ public class XAndO {
 				}
 			}
 		}
-		System.out.println("No Winner");
+		System.out.println("No Winner!");
 		return true;
+
 	}// End of gameIsOver Method
 
-	// This method for printing Game Board
+	// Method for printing Game Board
 	private static void printBoard(char[][] gBoard) {
 		System.out.println(" ");
 		for (int i = 0; i < 3; i++) {
@@ -208,5 +213,5 @@ public class XAndO {
 			System.out.println();
 			System.out.println("-----------------");
 		}
-	}// End of printBoard Method
+	}
 }// End of XAndO Class
