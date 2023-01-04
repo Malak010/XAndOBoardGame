@@ -71,23 +71,7 @@ public class XAndO {
 		move(gBoard, userInput2, 'O');// Any number 0-8 which selected by player1 will placed as X
 	}// End of playerTurn2 Method
 
-	/*
-	 * H-check"Row1" {{ 'X', 'X', 'X' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' }};
-	 * 
-	 * H-check"Row2" {{ ' ', ' ', ' ' }, { 'X', 'X', 'X' }, { ' ', ' ', ' ' }};
-	 * 
-	 * H-check"Row3" {{ ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { 'X', 'X', 'X' }};
-	 * 
-	 * V-check"Column1" {{ 'X', ' ', ' ' }, { 'X', ' ', ' ' }, { 'X', ' ', ' ' }};
-	 * 
-	 * V-check"Column2" {{ ' ', 'X', ' ' }, { ' ', 'X', ' ' }, { ' ', 'X', ' ' }};
-	 * 
-	 * V-check"Column3" {{ ' ', ' ', 'X' }, { ' ', ' ', 'X' }, { ' ', ' ', 'X' }};
-	 * 
-	 * Diagonal-Check {{ 'X', ' ', ' ' }, { ' ', 'X', ' ' }, { ' ', ' ', 'X' }};
-	 * 
-	 * Diagonal-Check {{ ' ', ' ', 'X' }, { ' ', 'X', ' ' }, { 'X', ' ', ' ' }};
-	 */
+//Checking for winnder
 	static boolean checkWinner(char[][] gBoard, char symbol) {
 		if (gBoard[0][0] == symbol && gBoard[0][1] == symbol && gBoard[0][2] == symbol) {
 			return true;
