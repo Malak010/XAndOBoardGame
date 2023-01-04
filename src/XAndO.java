@@ -7,6 +7,8 @@ public class XAndO {
 		//// initialize array with its element .. char [][] gBoard = new char[][]; or
 		char[][] gBoard = { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 
+		System.out.println("Welcome to Tic Tac Toe Game..");
+
 		Scanner sc = new Scanner(System.in);
 
 		boolean togglePlayer = true;
@@ -25,7 +27,7 @@ public class XAndO {
 			}
 		}
 
-	}// End of Main Method
+	}// End of Main
 
 	/*
 	 * player 1 Turn -accept input from user and save it in userInput -Doing Check
@@ -193,11 +195,12 @@ public class XAndO {
 				}
 			}
 		}
-		System.out.println("No Winner");
+		System.out.println("No Winner!");
 		return true;
+
 	}// End of gameIsOver Method
 
-	// This method for printing Game Board
+	// Method for printing Game Board
 	private static void printBoard(char[][] gBoard) {
 		System.out.println(" ");
 		for (int i = 0; i < 3; i++) {
@@ -208,5 +211,5 @@ public class XAndO {
 			System.out.println();
 			System.out.println("-----------------");
 		}
-	}// End of printBoard Method
+	}
 }// End of XAndO Class
